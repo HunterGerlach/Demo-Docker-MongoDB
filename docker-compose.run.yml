@@ -3,9 +3,9 @@ services:
   mongo:
     image: "mongo:latest"
     #Run single command in docker-compose:
-    command: sh -c 'exec mongo "mongod:27017/test"'
+    #command: sh -c 'exec mongo "mongod:27017/test"'
     #To run interactive shell, run compose then this:
-    #docker exec -it dockermongodb_mongo_1 mongo
+    #docker exec -it dockermongodb_mongo_1 sh -c 'mongo mongod:27017'
 networks:
   default:
     external:

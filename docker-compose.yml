@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mongod:
+    image: "mongo:latest"
+    ports:
+     - "27017:27017"
+    volumes:
+     - ./data:/data/db
+    networks:
+     - mongo-net
+networks:
+  mongo-net:
+    driver: bridge

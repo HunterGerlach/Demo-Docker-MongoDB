@@ -1,0 +1,9 @@
+version: '2'
+services:
+  mongo:
+    image: "mongo:latest"
+    command: sh -c 'exec mongo "mongod:27017/test"'
+networks:
+  default:
+    external:
+      name: dockermongodb_mongo-net
